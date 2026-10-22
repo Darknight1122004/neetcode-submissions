@@ -1,0 +1,15 @@
+class Solution:
+    def isPerfectSquare(self, num: int) -> bool:
+        l=0
+        r=num
+        ans=0
+        while l<=r:
+            mid=(l+r)//2
+            if (mid*mid)<num:
+                ans=mid
+                l=mid+1
+            elif (mid*mid)>num:
+                r=mid-1   
+            else:
+                return True
+        return False           
